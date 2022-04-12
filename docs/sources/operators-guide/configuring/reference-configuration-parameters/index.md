@@ -1496,6 +1496,10 @@ The `ruler_storage` block configures the ruler storage backend.
 # CLI flag: -ruler-storage.backend
 [backend: <string> | default = "filesystem"]
 
+# (advanced) Prefix for all objects stored in the backend storage.
+# CLI flag: -ruler-storage.storage-prefix
+[storage_prefix: <string> | default = ""]
+
 s3:
   # The S3 bucket endpoint. It could be an AWS S3 endpoint listed at
   # https://docs.aws.amazon.com/general/latest/gr/s3.html or the address of an
@@ -1940,6 +1944,10 @@ The `alertmanager_storage` block configures the alertmanager storage backend.
 # filesystem, local.
 # CLI flag: -alertmanager-storage.backend
 [backend: <string> | default = "filesystem"]
+
+# (advanced) Prefix for all objects stored in the backend storage.
+# CLI flag: -alertmanager-storage.storage-prefix
+[storage_prefix: <string> | default = ""]
 
 s3:
   # The S3 bucket endpoint. It could be an AWS S3 endpoint listed at
@@ -2930,6 +2938,10 @@ The `blocks_storage` block configures the blocks storage.
 # filesystem.
 # CLI flag: -blocks-storage.backend
 [backend: <string> | default = "filesystem"]
+
+# (advanced) Prefix for all objects stored in the backend storage.
+# CLI flag: -blocks-storage.storage-prefix
+[storage_prefix: <string> | default = ""]
 
 s3:
   # The S3 bucket endpoint. It could be an AWS S3 endpoint listed at
